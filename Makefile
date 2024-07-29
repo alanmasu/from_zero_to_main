@@ -1,5 +1,5 @@
 main :
-	riscv32-unknown-elf-gcc src/main.c -o build/main.elf
+	riscv32-unknown-elf-gcc -T utils/ld_script.ld src/main.c -o build/main.elf
 
 show_all_build_res: show_build
 	riscv32-unknown-elf-objdump -D build/main.elf
