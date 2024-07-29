@@ -5,6 +5,15 @@ Inserito un esempio di programma per la compilazione, creato il makefile
 ``` bash
 make
 ```
+Per vedere i simboli del file oggetto:
+``` bash
+make show_build_res
+```
+
+Per vedere il risultato dell'intera build (simboli + disassembly di tutto l'elf):
+``` bash
+make show_all_build_res
+```
 
 ## Struttura del progetto
 ```
