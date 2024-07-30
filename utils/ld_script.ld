@@ -17,24 +17,24 @@ SECTIONS
 
 
 	. = 0x40010000;
-
+	__global_pointer$ = 0x40010800;
 	.const : {
 		*( .const )
 		_econst = .;
 	} > RAM
 	
 	.data : {
-		__global_pointer$ = . ;
 		*( .data )
 		_edata = .;
 	} > RAM
 	
+
 	.bss : {
 		*( .bss )
 		*(COMMON)
 		_end = .;
 	} > RAM
-	__stack_pointer$ = .;
+	__stack_pointer$ = ORIGIN(RAM) + LENGTH(RAM);
 
 	
 }
